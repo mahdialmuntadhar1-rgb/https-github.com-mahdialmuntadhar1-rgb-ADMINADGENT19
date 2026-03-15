@@ -21,7 +21,7 @@ export const DataTable: React.FC<DataTableProps> = ({ records }) => {
             <input 
               type="text" 
               placeholder="Search records..." 
-              className="bg-white/5 border border-white/10 rounded-xl py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500/50 w-64 transition-all"
+              className="bg-white/5 border border-white/10 rounded-xl py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50 w-64 transition-all"
             />
           </div>
           <button className="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-slate-300">
@@ -55,7 +55,7 @@ export const DataTable: React.FC<DataTableProps> = ({ records }) => {
                   <div className="text-xs text-slate-400 font-mono">
                     {record.location.lat.toFixed(4)}, {record.location.lng.toFixed(4)}
                   </div>
-                  <div className="text-[10px] text-purple-400/60 font-medium uppercase tracking-tighter">{record.governorate}</div>
+                  <div className="text-[10px] text-orange-400/60 font-medium uppercase tracking-tighter">{record.governorate}</div>
                 </td>
                 <td className="px-6 py-4">
                   <div className="flex items-center gap-2">
@@ -91,7 +91,7 @@ export const DataTable: React.FC<DataTableProps> = ({ records }) => {
         <p className="text-xs text-slate-500">Showing {records.length} of 30,421 records</p>
         <div className="flex gap-2">
           <button className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-slate-400 hover:text-white transition-colors">Previous</button>
-          <button className="px-3 py-1 rounded-lg bg-purple-600 text-xs font-bold text-white hover:bg-purple-500 transition-colors">Next</button>
+          <button className="px-3 py-1 rounded-lg bg-orange-600 text-xs font-bold text-white hover:bg-orange-500 transition-colors">Next</button>
         </div>
       </div>
     </div>

@@ -9,15 +9,15 @@ interface AgentPanelProps {
 
 export const AgentPanel: React.FC<AgentPanelProps> = ({ logs }) => {
   return (
-    <div className="glass-purple rounded-2xl flex flex-col h-full">
+    <div className="glass-orange rounded-2xl flex flex-col h-full">
       <div className="p-6 border-b border-white/5 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+          <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400">
             <Cpu size={18} />
           </div>
           <div>
             <h2 className="text-lg font-bold text-white">18 Agents Network</h2>
-            <p className="text-[10px] text-indigo-300/60 font-bold uppercase tracking-widest">Real-time Scraping Logs</p>
+            <p className="text-[10px] text-amber-300/60 font-bold uppercase tracking-widest">Real-time Scraping Logs</p>
           </div>
         </div>
         <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
@@ -38,7 +38,7 @@ export const AgentPanel: React.FC<AgentPanelProps> = ({ logs }) => {
             <span className={`font-bold min-w-[100px] ${
               log.type === 'success' ? 'text-emerald-400' : 
               log.type === 'error' ? 'text-rose-400' : 
-              log.type === 'warning' ? 'text-amber-400' : 'text-indigo-400'
+              log.type === 'warning' ? 'text-amber-400' : 'text-orange-400'
             }`}>
               [{log.governorate.toUpperCase()}]
             </span>
@@ -53,7 +53,7 @@ export const AgentPanel: React.FC<AgentPanelProps> = ({ logs }) => {
           <motion.div 
             initial={{ width: 0 }}
             animate={{ width: '65%' }}
-            className="h-full bg-gradient-to-r from-purple-500 to-indigo-500"
+            className="h-full bg-gradient-to-r from-orange-500 to-amber-500"
           />
         </div>
         <span className="text-[10px] font-bold text-slate-500 uppercase">Global Sync: 65%</span>

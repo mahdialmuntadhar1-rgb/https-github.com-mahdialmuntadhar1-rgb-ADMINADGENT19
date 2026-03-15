@@ -56,7 +56,7 @@ export default function App() {
   }, [selectedGovId]);
 
   return (
-    <div className="flex min-h-screen bg-[#0f0720]">
+    <div className="flex min-h-screen bg-[#1a0f00]">
       <Sidebar selectedId={selectedGovId} onSelect={setSelectedGovId} />
       
       <main className="flex-1 ml-72 p-8 overflow-y-auto">
@@ -69,7 +69,7 @@ export default function App() {
             <p className="text-slate-400 mt-1">Regional data management and agent monitoring</p>
           </div>
           <div className="flex gap-3">
-            <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-600 text-white font-bold text-sm hover:bg-purple-500 transition-all shadow-lg shadow-purple-500/20">
+            <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-orange-600 text-white font-bold text-sm hover:bg-orange-500 transition-all shadow-lg shadow-orange-500/20">
               <RefreshCw size={16} /> Force Sync
             </button>
           </div>

@@ -19,10 +19,10 @@ export const StatCard: React.FC<StatCardProps> = ({ title, value, icon: Icon, tr
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay }}
-      className="glass-purple p-6 rounded-2xl flex flex-col gap-4 group hover:border-purple-500/40 transition-all duration-300"
+      className="glass-orange p-6 rounded-2xl flex flex-col gap-4 group hover:border-orange-500/40 transition-all duration-300"
     >
       <div className="flex items-center justify-between">
-        <div className="p-3 rounded-xl bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20 transition-colors">
+        <div className="p-3 rounded-xl bg-orange-500/10 text-orange-400 group-hover:bg-orange-500/20 transition-colors">
           <Icon size={24} />
         </div>
         {trend && (
