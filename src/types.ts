@@ -6,25 +6,50 @@ export interface Governorate {
   status: GovernorateStatus;
 }
 
+export type ValidationStatus = 'verified' | 'pending' | 'rejected' | 'flagged';
+
 export interface BusinessRecord {
   id: string;
   name: string;
+  organization_type: string;
   category: string;
+  governorate: string;
+  phone: string;
+  website: string;
+  address: string;
+  source_url: string;
+  validation_status: ValidationStatus;
+  confidence_score: number;
+  flag_reason?: string;
+  created_at: string;
+  updated_at: string;
   location: {
     lat: number;
     lng: number;
   };
-  status: 'verified' | 'pending' | 'rejected';
-  governorate: string;
+}
+
+export type AgentStatus = 'Idle' | 'Running' | 'Paused' | 'Error';
+
+export interface AIAgent {
+  id: string;
+  name: string;
+  status: AgentStatus;
+  recordsProcessed: number;
+  errors: number;
+  lastActivity: string;
+  region: string;
 }
 
 export interface AgentLog {
   id: string;
   agentId: string;
+  agentName: string;
   governorate: string;
   message: string;
   timestamp: string;
   type: 'info' | 'success' | 'warning' | 'error';
+  task?: string;
 }
 
 export const GOVERNORATES: Governorate[] = [
@@ -46,4 +71,16 @@ export const GOVERNORATES: Governorate[] = [
   { id: 'saladin', name: 'Saladin', status: 'stale' },
   { id: 'duhok', name: 'Duhok', status: 'fresh' },
   { id: 'wasit', name: 'Wasit', status: 'fresh' },
+];
+
+export const CATEGORIES = [
+  'Healthcare',
+  'Education',
+  'Retail',
+  'Restaurant',
+  'Technology',
+  'Manufacturing',
+  'Finance',
+  'Non-Profit',
+  'Government'
 ];
